@@ -31,8 +31,6 @@ body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradi
 .search-icon{position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
 .header-mid{flex:1}
 .header-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
-.random-btn{background:var(--bg3);border:1px solid var(--border);color:var(--accent4);font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:1px;padding:0 10px;height:30px;border-radius:4px;cursor:pointer;transition:all .15s;white-space:nowrap}
-.random-btn:hover{border-color:var(--accent4);background:rgba(0,255,157,0.08)}
 
 /* Account button */
 .acct-btn{width:32px;height:32px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .2s;position:relative;flex-shrink:0}
@@ -197,26 +195,32 @@ body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradi
 .explore-hero{padding:24px 0 16px;text-align:center}
 .explore-hero-title{font-family:'Orbitron',monospace;font-size:26px;font-weight:900;color:var(--accent4);letter-spacing:3px;text-shadow:0 0 20px rgba(0,255,157,0.3)}
 .explore-hero-sub{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:6px}
-.explore-section{margin-bottom:32px}
-.explore-section-hd{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-bottom:12px;padding-bottom:7px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.explore-refresh{background:none;border:1px solid var(--border);color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:9px;padding:2px 8px;border-radius:3px;cursor:pointer;transition:all .15s}
-.explore-refresh:hover{border-color:var(--accent4);color:var(--accent4)}
-.explore-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
-.explore-app-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:16px;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:12px;position:relative;overflow:hidden}
-.explore-app-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--accent3);transform:scaleY(0);transition:transform .15s;transform-origin:bottom}
-.explore-app-card:hover{border-color:rgba(180,79,255,0.35);background:var(--bg3);transform:translateY(-1px)}
-.explore-app-card:hover::before{transform:scaleY(1)}
-.explore-app-icon{width:40px;height:40px;background:var(--bg3);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:20px;border:1px solid var(--border);flex-shrink:0}
-.explore-app-name{font-size:13px;font-weight:700;color:var(--text)}
-.explore-app-desc{font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--muted);margin-top:2px}
-.explore-game-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:14px 16px;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:10px;position:relative;overflow:hidden}
-.explore-game-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--accent4);transform:scaleY(0);transition:transform .15s;transform-origin:bottom}
-.explore-game-card:hover{border-color:rgba(0,255,157,0.3);background:var(--bg3);transform:translateY(-1px)}
-.explore-game-card:hover::before{transform:scaleY(1)}
-.explore-game-icon{width:38px;height:38px;background:var(--bg3);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:14px;font-family:'Orbitron',monospace;font-weight:900;border:1px solid var(--border);flex-shrink:0}
-.explore-game-name{font-size:13px;font-weight:700;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
-.explore-game-sub{font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--muted)}
+.explore-section{margin-bottom:36px}
+.explore-section-hd{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.explore-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+/* Big app cards */
+.explore-app-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:24px 22px 20px;cursor:pointer;transition:all .18s;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden;min-height:150px}
+.explore-app-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(180,79,255,0.07) 0%,transparent 55%);pointer-events:none}
+.explore-app-card:hover{border-color:rgba(180,79,255,0.5);background:var(--bg3);transform:translateY(-3px);box-shadow:0 10px 36px rgba(180,79,255,0.13)}
+.explore-app-card-row{display:flex;align-items:center;gap:14px}
+.explore-app-icon{width:48px;height:48px;background:var(--bg3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;border:1px solid var(--border);flex-shrink:0}
+.explore-app-name{font-size:15px;font-weight:700;color:var(--text);line-height:1.2}
+.explore-app-desc{font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--muted);line-height:1.5;flex:1}
+.explore-app-cta{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--accent3)}
+/* Big game cards */
+.explore-game-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:24px 22px 20px;cursor:pointer;transition:all .18s;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden;min-height:150px}
+.explore-game-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,255,157,0.06) 0%,transparent 55%);pointer-events:none}
+.explore-game-card:hover{border-color:rgba(0,255,157,0.45);background:var(--bg3);transform:translateY(-3px);box-shadow:0 10px 36px rgba(0,255,157,0.1)}
+.explore-game-card-row{display:flex;align-items:center;gap:14px}
+.explore-game-icon{width:48px;height:48px;background:var(--bg3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;font-family:'Orbitron',monospace;font-weight:900;border:1px solid var(--border);flex-shrink:0}
+.explore-game-name{font-size:15px;font-weight:700;color:var(--text);line-height:1.2}
+.explore-game-sub{font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--muted);line-height:1.5;flex:1}
+.explore-game-cta{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--accent4)}
+.explore-random-row{display:flex;justify-content:center;margin:4px 0 20px}
+.explore-random-btn{background:var(--bg3);border:1px solid var(--border);color:var(--accent4);font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:1px;padding:10px 28px;border-radius:6px;cursor:pointer;transition:all .15s}
+.explore-random-btn:hover{border-color:var(--accent4);background:rgba(0,255,157,0.08);box-shadow:0 0 16px rgba(0,255,157,0.15)}
 .explore-note{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);text-align:center;margin-top:10px;opacity:.7}
+@media(max-width:600px){.explore-grid{grid-template-columns:1fr}}
 /* Catalog footer */
 .catalog-footer{text-align:center;padding:28px 0 18px;border-top:1px solid var(--border);margin-top:24px}
 .catalog-footer-req{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)}
@@ -279,7 +283,6 @@ body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradi
   </div>
   <div class="header-mid"></div>
   <div class="header-actions">
-    <button class="random-btn" id="randomBtn">⚡ RANDOM</button>
     <button class="acct-btn" id="acctBtn" title="Player Profile">👤<span class="acct-dot"></span></button>
   </div>
 </header>
@@ -287,7 +290,7 @@ body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradi
 <div class="tabbar">
   <button class="tab-btn tab-explore" data-tab="explore">EXPLORE</button>
   <button class="tab-btn tab-games active" data-tab="games">GAMES<span class="tab-count" id="tab-game-count"></span></button>
-  <button class="tab-btn tab-apps" data-tab="apps">APPS<span class="tab-count" id="tab-apps-count">13</span></button>
+  <button class="tab-btn tab-apps" data-tab="apps">APPS<span class="tab-count" id="tab-apps-count">21</span></button>
   <button class="tab-btn tab-proxies" data-tab="proxies">PROXIES<span class="tab-count">3</span></button>
 </div>
 
@@ -301,20 +304,17 @@ body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradi
         <div class="explore-hero-title">EXPLORE</div>
         <div class="explore-hero-sub">Discover something new — picks refresh every 24 hours</div>
       </div>
+      <div class="explore-random-row">
+        <button class="explore-random-btn" id="exploreRandomBtn">⚡ RANDOM GAME</button>
+      </div>
       <div class="explore-section">
-        <div class="explore-section-hd">
-          <span>⭐ FEATURED APPS</span>
-          <button class="explore-refresh" id="refreshExploreApps">↻ REFRESH</button>
-        </div>
+        <div class="explore-section-hd">⭐ FEATURED APPS</div>
         <div class="explore-grid" id="explore-apps-grid"></div>
       </div>
       <div class="explore-section">
-        <div class="explore-section-hd">
-          <span>🎮 FEATURED GAMES</span>
-          <button class="explore-refresh" id="refreshExploreGames">↻ REFRESH</button>
-        </div>
+        <div class="explore-section-hd">🎮 FEATURED GAMES</div>
         <div class="explore-grid" id="explore-games-grid"></div>
-        <div class="explore-note">Refreshes daily · click ↻ to shuffle now</div>
+        <div class="explore-note">Refreshes daily</div>
       </div>
     </div>
 
@@ -383,7 +383,15 @@ const externalGames=[
 
 const appsData=[
   {name:'Music45',url:'https://music45.vercel.app/#home',icon:'🎵',desc:'Music streaming & discovery',openBlank:true},
+  {name:'Audio Discovery',url:'https://app-audio.vercel.app/',icon:'🎧',desc:'Discover new music & sounds',openBlank:true},
   {name:'Fluid Simulation',url:'https://web-gl-fluid-simulation-eta.vercel.app/',icon:'💧',desc:'Real-time WebGL fluid sim',openBlank:true},
+  {name:'Rock Paper Scissors AI',url:'https://rockpaperscissors-ai.vercel.app/',icon:'🤖',desc:'Play RPS against an AI',openBlank:true},
+  {name:'Mini Games',url:'https://mini-games-psi.vercel.app/',icon:'🕹️',desc:'Collection of mini games',openBlank:true},
+  {name:'2048 Stackr',url:'https://2048-stackr.vercel.app/',icon:'🔢',desc:'A fresh twist on 2048',openBlank:true},
+  {name:'Wordle Clone',url:'https://react-native-wordle-clone.vercel.app/',icon:'🟩',desc:'Daily word guessing game',openBlank:true},
+  {name:'Wordle Step',url:'https://wordle-step.vercel.app/',icon:'📖',desc:'Step-by-step Wordle variant',openBlank:true},
+  {name:'The Useless Web',url:'https://theuselessweb.com/',icon:'🌐',desc:'Random weird websites',openBlank:true},
+  {name:'Vibe Coding',url:'https://oss-vibe-coding-platform.vercel.app/',icon:'💻',desc:'Open source coding platform',openBlank:true},
   {name:'NBA Pick\'em',url:'https://picks.nba.com/pickem/how-to-play',icon:'🏀',desc:'NBA bracket predictions',openBlank:true},
   {name:'Chattide AI',url:'https://www.chattide.ai/',icon:'💬',desc:'AI-powered chat interface',openBlank:true},
   {name:'Brawlytix',url:'https://brawlytix.com/',icon:'⚔️',desc:'Brawl Stars analytics tool',openBlank:true},
@@ -586,13 +594,7 @@ function buildCatalog(){
 
   setTimeout(setupScrollSpy,200);
 
-  document.getElementById('randomBtn').onclick=()=>{
-    sessionStorage.setItem('ig_used_random','1');
-    const pick=unique[Math.floor(Math.random()*unique.length)];
-    const name=getDisplayName(pick);
-    showToast('🎲 '+name);
-    setTimeout(()=>launchGame(pick,name),500);
-  };
+
 }
 
 function buildApps(){
@@ -726,7 +728,13 @@ function buildExplore(seed){
   pickedApps.forEach(item=>{
     const card=document.createElement('div');
     card.className='explore-app-card';
-    card.innerHTML='<div class="explore-app-icon">'+item.icon+'</div><div><div class="explore-app-name">'+item.name+'</div><div class="explore-app-desc">'+item.desc+'</div></div>';
+    card.innerHTML=
+      '<div class="explore-app-card-row">'+
+        '<div class="explore-app-icon">'+item.icon+'</div>'+
+        '<div class="explore-app-name">'+item.name+'</div>'+
+      '</div>'+
+      '<div class="explore-app-desc">'+item.desc+'</div>'+
+      '<div class="explore-app-cta">OPEN APP →</div>';
     card.onclick=()=>openApp(item);
     ag.appendChild(card);
   });
@@ -742,7 +750,13 @@ function buildExplore(seed){
     const color=isEmoji?'var(--accent4)':getColor(initial);
     const card=document.createElement('div');
     card.className='explore-game-card';
-    card.innerHTML='<div class="explore-game-icon" style="color:'+color+';border-color:'+color+'33">'+initial+'</div><div style="flex:1;min-width:0"><div class="explore-game-name">'+name+'</div><div class="explore-game-sub">Click to play</div></div>';
+    card.innerHTML=
+      '<div class="explore-game-card-row">'+
+        '<div class="explore-game-icon" style="color:'+color+';border-color:'+color+'33">'+initial+'</div>'+
+        '<div class="explore-game-name">'+name+'</div>'+
+      '</div>'+
+      '<div class="explore-game-sub">Click to play</div>'+
+      '<div class="explore-game-cta">PLAY NOW →</div>';
     card.onclick=()=>launchGame(f,name);
     gg.appendChild(card);
   });
@@ -754,8 +768,14 @@ document.addEventListener('DOMContentLoaded',()=>{
   // Explore
   let exploreSeed=getDailySeed();
   buildExplore(exploreSeed);
-  document.getElementById('refreshExploreApps').onclick=()=>{exploreSeed=Math.floor(Math.random()*999983);buildExplore(exploreSeed);};
-  document.getElementById('refreshExploreGames').onclick=()=>{exploreSeed=Math.floor(Math.random()*999983);buildExplore(exploreSeed);};
+  document.getElementById('exploreRandomBtn').onclick=()=>{
+    const unique=[...new Set(files)];
+    const pick=unique[Math.floor(Math.random()*unique.length)];
+    const name=getDisplayName(pick);
+    showToast('🎲 '+name);
+    setTimeout(()=>launchGame(pick,name),400);
+  };
+
 
   document.querySelectorAll('.tab-btn').forEach(btn=>{
     btn.addEventListener('click',()=>switchTab(btn.dataset.tab));
